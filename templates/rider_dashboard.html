@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rider Dashboard</title>
+</head>
+<body>
+    <h2>Welcome, {{ rider.name }}</h2>
+    <!-- Rider dashboard content -->
+    
+    <!-- Form to book a ride -->
+    <h3>Book a Ride</h3>
+    <form action="/book_ride" method="post">
+        <!-- Ride details input fields -->
+        <label>Start Location:</label><br>
+        <input type="text" name="start_location"><br>
+        
+        <label>Destination:</label><br>
+        <input type="text" name="destination"><br><br>
+        
+        <input type="submit" value="Book Ride">
+    </form>
+    
+    <!-- Other rider dashboard content -->
+    <!-- ... -->
+</body>
+</html>
+

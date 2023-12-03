@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Owner Dashboard</title>
+</head>
+<body>
+    <h2>Welcome, {{ owner.name }}</h2>
+    <!-- Owner dashboard content -->
+    <!-- Add ride form -->
+    <form action="/owner_dashboard/{{ owner.unique_id }}" method="post">
+        <!-- Ride details input fields -->
+        <label>Start Location:</label><br>
+        <input type="text" name="start_location"><br>
+        
+        <label>Destination:</label><br>
+        <input type="text" name="destination"><br>
+        
+        <label>Car Model:</label><br>
+        <input type="text" name="car_model"><br>
+        
+        <label>Number of Seats:</label><br>
+        <input type="number" name="seats"><br><br>
+        
+        <input type="submit" value="Add Ride">
+    </form>
+</body>
+</html>

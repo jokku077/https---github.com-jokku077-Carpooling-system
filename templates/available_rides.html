@@ -1,0 +1,31 @@
+<!-- available_rides.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Available Rides</title>
+</head>
+<body>
+    <h2>Available Rides</h2>
+    <table border="1">
+        <tr>
+            <th>Unique ID</th>
+            <th>Start Location</th>
+            <th>Destination</th>
+            <th>Car Model</th>
+            <th>Seats Available</th>
+            <th>Action</th>
+        </tr>
+        {% for ride in rides %}
+        <tr>
+            <td>{{ ride.ownerid }}</td>
+            <td>{{ ride.start_location }}</td>
+            <td>{{ ride.destination }}</td>
+            <td>{{ ride.car_model }}</td>
+            <td>{{ ride.seats }}</td>
+            <td><a href="/book_ride/{{ ride.ownerid }}">Book Ride</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

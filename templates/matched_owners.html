@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Matched Owners</title>
+</head>
+<body>
+    <h2>Matched Owners</h2>
+    <table border="1">
+        <tr>
+            <th>Unique ID</th>
+            <th>Start Location</th>
+            <th>Destination</th>
+            <th>Car Model</th>
+            <th>Seats</th>
+        </tr>
+        {% for owner in owners %}
+        <tr>
+            <td>{{ owner.unique_id }}</td>
+            <td>{{ owner.start_location }}</td>
+            <td>{{ owner.destination }}</td>
+            <td>{{ owner.car_model }}</td>
+            <td>{{ owner.seats }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
